@@ -3,7 +3,7 @@ from app.models import Sources
 
 class SourcesTest(unittest.TestCase):
     '''
-    Test Class to test the behaviour of the Source class
+    Test Class to test the behaviour of the Source class.
     '''
 
     def setUp(self):
