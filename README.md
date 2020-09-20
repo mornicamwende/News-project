@@ -57,14 +57,3 @@ Live link: https://mwendenews.herokuapp.com/
 
 ### License
 Copyright &copy; 2020.All rights reserved
-
-
-
-
-
-
-
-
-
-
-    
