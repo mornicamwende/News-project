@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Articles </title>
+    {% endif %}
+</head>
+
+<body>
+
+    <!-- Content block -->
+    {% block content %}
+    <div class="container article-content">
+        <h1>{{ title }}</h1>
+
+        {% for articles_item in articles %}
+        <div class="row" id="article-row">
+
+
+            <div class="col-md-5">
+                <img class="fadeInUp details" src="{{articles_item.urlToImage}}" width="100%">
+            </div>
+
+            <div class="col-md-7">
+                <p><strong>{{ articles_item.title }}</strong></p>
+                <hr>
+                <p>{{ articles_item.description }}</p>
+
+                <div id="content-details">
+                    <p><em>{{articles_item.content}}</em></p>
+                </div>
+
+                <div class="animated fadeInUp details">
+                        {%if articles_item.author%}
+                        <p class="font-weight-normal">by {{articles_item.author}}</a>.
+                        </p>
+                        {%endif%}
+        
+                        {%if articles_item.publishedAt%}
+                        <p>Posted on: {{articles_item.publishedAt[:10]}}</p>
+                        {%endif%}
+        
+                        <p><a href="{{ articles_item.url }}">Go to full story</a></p>
+        
+
+                </div>
+                
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+
+
+    {% endblock%}
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  {% if title %}
+  <title> {{ title }}</title>
+  {% else %}
+  <title> The World's Daily Dose </title>
+  {% endif %}
+</head>
+
+<body>
+  <!-- Content block -->
+  {% block content %}
+
+
+  <!-- Sources section  -->
+
+  <div class="container landing-content">
+        <div class="list-group list-group-flush">
+          <h3 class="News text-center"> News Sources</h3>
+          <br>
+          <div class="row bg-info">
+            {% for general_category in general %}
+            <div class="col-sm-4 p-4">
+              <div class="card">
+                <div class="card-body">
+                  <a href="/newsarticle/{{general_category.id}}" style="width: 20rem;">
+                    {{general_category.name}}
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+  </div>
+
+
+  </div>
+
+  {% endblock%}
+
+
+
+</body>
+
+</html>
