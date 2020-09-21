@@ -21,7 +21,7 @@ This application allows users to access news of any kind from various platforms 
 
 3. Run chmod +x start.sh on your project directory and then launch the project by running ./start.sh to launch the program.
 
-## BDD
+
 
 <table>
     <tr>
@@ -57,3 +57,5 @@ Live link: https://mwendenews.herokuapp.com/
 
 ### License
 Copyright &copy; 2020.All rights reserved
+
+## BDD
