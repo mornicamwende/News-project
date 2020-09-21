@@ -55,7 +55,7 @@ Live link: https://mwendenews.herokuapp.com/
 .   Bootstrap
 .   PIP
 
+## BDD
+
 ### License
 Copyright &copy; 2020.All rights reserved
-
-## BDD
